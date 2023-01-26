@@ -1,13 +1,8 @@
 CC = gcc
 CFLAGS = -Wall -O2
-LDFLAGS = @LDFLAGS@
+LDFLAGS = @LDFLAGS@ -lnfc
 CPPFLAGS = @CPPFLAGS@
 BIN = @prefix@/bin
-
-ifeq ($(LDFLAGS),)
-    LDFLAGS = -lnfc
-endif
-
 
 SRCDIR = src
 OBJDIR = obj
